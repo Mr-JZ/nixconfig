@@ -11,6 +11,10 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }:
@@ -26,13 +30,13 @@
     theKBDLayout = "us";
     theLCVariables = "en_US.UTF-8";
     theTimezone = "Europe/Berlin";
-    theme = "tokyo-city-dark";
+    theme = "tokyo-night-storm";
     waybarStyle = "style2"; # can be style1-2
     borderAnim = "on"; # anything other than on disables anim borders in Hyprland
     browser = "firefox";
     wallpaperGit = "https://gitlab.com/Zaney/my-wallpapers.git";
     wallpaperDir = "/home/${username}/Pictures/Wallpapers";
-    flakeDir = "/home/${username}/gitlab/zaneyos";
+    flakeDir = "/home/${username}/zaneyos";
     # Driver selection profile
     # Options include amd (tested), intel, nvidia
     # GPU hybrid options: intel-nvidia, intel-amd
@@ -77,10 +81,11 @@
 	        home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-	        home-manager.users.${username} = import ./home.nix;
+	        home-manager.users.${username} = import ./dotfiles/home.nix;
 	      }
 	    ];
       };
     };
   };
 }
+

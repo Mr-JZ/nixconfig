@@ -8,7 +8,6 @@ let
 in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
   # List System Programs
   environment.systemPackages = with pkgs; [
     wget curl git cmatrix lolcat neofetch htop btop libvirt
