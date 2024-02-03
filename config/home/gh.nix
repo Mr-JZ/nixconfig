@@ -1,8 +1,13 @@
 { config, pkgs, flakeDir, ... }:
 {
-    gitAndTools.gh = {
+    programs.gh = {
       enable = true;
-      enableCompletion = true;
-      enableGhcup = true;
+      package = pkgs.gh;
+      extensions = [ ];
     };
-  }
+    programs.gh-dash = {
+      enable = true;
+      package = pkgs.gh-dash;
+      extensions = [ ];
+    };
+}
