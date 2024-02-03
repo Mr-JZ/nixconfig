@@ -1,3 +1,0 @@
-[submodule "config/home/files/nvim"]
-	path = config/home/files/nvim
-	url = git@github.com:Mr-JZ/lazy-config.git

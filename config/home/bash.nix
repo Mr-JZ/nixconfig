@@ -11,6 +11,7 @@
       #fi
     '';
     initExtra = ''
+    this is a test
     '';
     sessionVariables = {
     
