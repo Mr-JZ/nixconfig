@@ -36,7 +36,7 @@
     browser = "firefox";
     wallpaperGit = "https://gitlab.com/Zaney/my-wallpapers.git";
     wallpaperDir = "/home/${username}/Pictures/Wallpapers";
-    flakeDir = "/home/${username}/zaneyos";
+    flakeDir = "/home/${username}/github/nixconfig";
     # Driver selection profile
     # Options include amd (tested), intel, nvidia
     # GPU hybrid options: intel-nvidia, intel-amd

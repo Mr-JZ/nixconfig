@@ -1,6 +1,0 @@
-[submodule "config/home/dotfiles"]
-	path = config/home/dotfiles
-	url = git@github.com:Mr-JZ/dotfiles.git
-[submodule "dotfiles"]
-	path = dotfiles
-	url = git@github.com:Mr-JZ/dotfiles.git
