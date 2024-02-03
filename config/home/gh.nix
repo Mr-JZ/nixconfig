@@ -8,6 +8,5 @@
     programs.gh-dash = {
       enable = true;
       package = pkgs.gh-dash;
-      extensions = [ ];
     };
 }
