@@ -24,4 +24,10 @@
     (import ./../scripts/theme-selector.nix { inherit pkgs; })
     (import ./../scripts/nvidia-offload.nix { inherit pkgs; })
   ];
+
+  programs.fzf = {
+    enable = true;
+    enableBashIntegration = true;
+    tmux.enableShellIntegration = true;
+  };
 }
