@@ -85,6 +85,11 @@ in {
     enableSSHSupport = true;
   };
 
+  programs.tmux = {
+    enable = true;
+    tmux.enableShellIntegration = true;
+  };
+
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 }
