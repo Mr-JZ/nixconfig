@@ -11,7 +11,10 @@
       #fi
     '';
     initExtra = ''
-    this is a test
+    stty -ixon
+
+    eval "$(zoxide init bash)"
+    export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
     '';
     sessionVariables = {
     

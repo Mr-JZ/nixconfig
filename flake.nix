@@ -46,8 +46,8 @@
     # Run: sudo lshw -c display to find this info
     # This is needed ONLY for hybrid nvidia offloading
     # Run: nvidia-offload (insert program name)
-    intel-bus-id = "PCI:0:2:0";
-    nvidia-bus-id = "PCI:14:0:0";
+    # intel-bus-id = "PCI:0:2:0";
+    # nvidia-bus-id = "PCI:14:0:0";
 
     pkgs = import nixpkgs {
       inherit system;

@@ -8,7 +8,7 @@
     swaynotificationcenter rofi-wayland imv transmission-gtk mpv
     gimp obs-studio blender-hip kdenlive rustup audacity
     font-awesome spotify swayidle vim neovide neovim pavucontrol
-    element-desktop swaylock gh fzf tmux zoxide stow home-manager ripgrep
+    element-desktop swaylock gh  tmux zoxide stow home-manager ripgrep
     chromium
     jellyfin-media-player
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })

@@ -4,6 +4,21 @@ let
   my-python-packages = ps: with ps; [
     pandas
     requests
+    pendulum # daytime made easy
+    pypdf # pdf manipulation
+    icecream # print debugging
+    loguru # logging
+    rich # rich print
+    tqdm # progress bar
+    xarray # n-d array
+    polars # data manipulation
+    seaborn # data visualization
+    result # result type
+    pydantic # data validation
+    fastapi # web framework
+    sqlmodel # orm
+    httpx # http client
+    python-dotenv # env variables
   ];
 in {
   # Allow unfree packages
@@ -15,7 +30,7 @@ in {
     v4l-utils ydotool wl-clipboard socat cowsay lsd lshw
     pkg-config meson hugo gnumake ninja go nodejs symbola
     noto-fonts-color-emoji material-icons brightnessctl
-    toybox virt-viewer jetbrains.pycharm-community-bin
+    toybox virt-viewer 
     (pkgs.python3.withPackages my-python-packages)
   ];
 
