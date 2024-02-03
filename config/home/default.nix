@@ -14,6 +14,7 @@
     ./rofi.nix
     ./bash.nix
     ./gtk-qt.nix
+    ./gh.nix
 
     # Install Programs & Scripts For User
     ./packages.nix
