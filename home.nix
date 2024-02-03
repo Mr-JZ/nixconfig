@@ -19,11 +19,6 @@
     ./config/home
   ];
 
-  home.file = {
-  "./.config/nvim" = ./dotfiles/nvim;
-  "./.config/tmux" = ./dotfiles/tmux;
-  };
-
   # Define Settings For Xresources
   xresources.properties = {
     "Xcursor.size" = 24;

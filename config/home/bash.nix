@@ -11,10 +11,6 @@
       #fi
     '';
     initExtra = ''
-      neofetch
-      if [ -f $HOME/.bashrc-personal ]; then
-        source $HOME/.bashrc-personal
-      fi
     '';
     sessionVariables = {
     
@@ -24,6 +20,7 @@
       flake-rebuild="sudo nixos-rebuild switch --flake ${flakeDir}";
       flake-update="sudo nix flake update ${flakeDir}";
       gcCleanup="nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
+      z="zoxide";
       v="nvim";
       ls="lsd";
       ll="lsd -l";

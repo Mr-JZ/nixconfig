@@ -13,4 +13,12 @@
     source = ./files/fonts;
     recursive = true;
   };
+  home.file.".config/nvim" = {
+    source = ./files/nvim;
+    recursive = true;
+  };
+  home.file.".config/tmux" = {
+    source = ./files/tmux;
+    recursive = true;
+  };
 }
