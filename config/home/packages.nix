@@ -6,11 +6,13 @@
   home.packages = with pkgs; [
     pkgs."${browser}" discord libvirt swww grim slurp gnome.file-roller
     swaynotificationcenter rofi-wayland imv transmission-gtk mpv
-    gimp obs-studio blender-hip kdenlive rustup audacity
-    font-awesome spotify swayidle vim neovide neovim pavucontrol
-    element-desktop swaylock gh  tmux zoxide stow home-manager ripgrep
+    gimp obs-studio blender-hip kdenlive audacity
+    font-awesome spotify swayidle neovide pavucontrol
+    element-desktop swaylock stow home-manager
     chromium
     jellyfin-media-player
+    ticktick
+    lazygit
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
     (import ./../scripts/emopicker9000.nix { inherit pkgs; })
