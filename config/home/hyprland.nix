@@ -125,6 +125,8 @@ in with lib; {
         new_is_master = true
       }
       bind = ${modifier},Return,exec,kitty
+      bind = ${modifier},C,exec, ${browser} --app=https://calendar.google.com
+      bind = ${modifier}SHIFT,O,exec, ${browser} --app=https://chat.openai.com
       bind = ${modifier}SHIFT,Return,exec,rofi -show drun
       bind = ${modifier}SHIFT,W,exec,kitty -e amfora
       bind = ${modifier}SHIFT,S,exec,swaync-client -rs
@@ -136,7 +138,8 @@ in with lib; {
       bind = ${modifier},G,exec,gimp
       bind = ${modifier}SHIFT,G,exec,godot4
       bind = ${modifier},T,exec,thunar
-      bind = ${modifier},M,exec,ario
+      bind = ${modifier},M,exec,${browser} --app=https://mail.google.com
+      bind = ${modifier}SHIFT,M,exec,${browser} --app=https://mipmip.github.io/home-manager-option-search/
       bind = ${modifier},Q,killactive,
       bind = ${modifier},P,pseudo,
       bind = ${modifier}SHIFT,I,togglesplit,
