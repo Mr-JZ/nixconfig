@@ -14,6 +14,9 @@
       confirm_os_window_close = 0;
       background_opacity = "0.85";
     };
+    keybindigs = {
+      "alt+g" = "send_key ctrl+b g";
+    };
     extraConfig = ''
       foreground #${config.colorScheme.colors.base05}
       background #${config.colorScheme.colors.base00}
