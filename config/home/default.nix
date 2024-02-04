@@ -19,6 +19,8 @@
     # Install Programs & Scripts For User
     ./packages.nix
 
+    ./service.nix
+
     # Place Home Files Like Pictures
     ./files.nix
   ];

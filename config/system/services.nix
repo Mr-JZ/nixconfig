@@ -21,6 +21,11 @@
     pulse.enable = true;
     jack.enable = true;
   };
+
+  services.nextcloud-client = {
+    enable = true;
+    startInBackground = true;
+  };
   hardware.pulseaudio.enable = false;
   sound.enable = true;
   security.rtkit.enable = true;
