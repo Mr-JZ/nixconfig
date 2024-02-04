@@ -33,7 +33,7 @@
     theme = "tokyo-night-storm";
     waybarStyle = "style2"; # can be style1-2
     borderAnim = "on"; # anything other than on disables anim borders in Hyprland
-    browser = "firefox";
+    browser = "chromium";
     wallpaperGit = "https://gitlab.com/Zaney/my-wallpapers.git";
     wallpaperDir = "/home/${username}/Pictures/Wallpapers";
     flakeDir = "/home/${username}/github/nixconfig";
