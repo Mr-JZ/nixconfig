@@ -40,6 +40,7 @@
       la="lsd -a";
       lal="lsd -al";
       ".."="cd ..";
+      "s" = "sesh connect $(sesh list | fzf --height 24)";
     };
   };
 }
