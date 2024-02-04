@@ -61,13 +61,13 @@ in {
     brightnessctl
     toybox 
     gh
-    gh-dach
     neovim
     vim
     ripgrep
     zoxide
     tmux
     rustup 
+    cargo
     fzf
     distrobox # generate a distro that can help to install packages
     (pkgs.python3.withPackages my-python-packages)
