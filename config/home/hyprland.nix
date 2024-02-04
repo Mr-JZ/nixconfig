@@ -136,8 +136,6 @@ in with lib; {
       bind = ${modifier},D,exec,discord
       bind = ${modifier},O,exec,obs
       bind = ${modifier},G,exec,gimp
-      bind = ${modifier}SHIFT,G,exec,godot4
-      bind = ${modifier},T,exec,thunar
       bind = ${modifier},M,exec,${browser} --app=https://mail.google.com
       bind = ${modifier}SHIFT,M,exec,${browser} --app=https://mipmip.github.io/home-manager-option-search/
       bind = ${modifier},Q,killactive,
