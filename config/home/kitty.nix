@@ -14,7 +14,7 @@
       confirm_os_window_close = 0;
       background_opacity = "0.85";
     };
-    keybindigs = {
+    keybindings = {
       "alt+g" = "send_key ctrl+b g";
     };
     extraConfig = ''
