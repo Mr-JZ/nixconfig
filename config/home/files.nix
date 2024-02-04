@@ -21,5 +21,9 @@
     source = ./files/nvim;
     recursive = true;
   };
+  home.file.".config/kitty" = {
+    source = ./files/kitty;
+    recursive = true;
+  };
 }
 
