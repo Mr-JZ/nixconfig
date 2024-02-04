@@ -67,6 +67,7 @@ in {
     zoxide
     tmux
     rustup 
+    fzf
     distrobox # generate a distro that can help to install packages
     (pkgs.python3.withPackages my-python-packages)
   ];
