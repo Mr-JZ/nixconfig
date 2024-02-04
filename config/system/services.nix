@@ -21,6 +21,10 @@
     pulse.enable = true;
     jack.enable = true;
   };
+  services.flatpak.enable = true;
+  services.tailscale = {
+    enable = true;
+  };
   hardware.pulseaudio.enable = false;
   sound.enable = true;
   security.rtkit.enable = true;
