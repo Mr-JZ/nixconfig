@@ -44,11 +44,6 @@
     POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
   };
 
-  #environment.etc = {
-  #"nvim".source = ./dotfiles/nvim;
-  #"tmux".source = ./dotfiles/tmux;
-  #};
-
   # Optimization settings and garbage collection automation
   nix = {
     settings = {
