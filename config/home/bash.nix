@@ -11,6 +11,7 @@
       #fi
     '';
     initExtra = ''
+
     stty -ixon
 
     # the command that initializes zoxide. And make that zoxide works with bash
@@ -18,6 +19,10 @@
     # include path to PATH
     export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
     export PATH=$PATH:$HOME/go/bin
+
+    if [ -f $HOME/.bashrc-personal ]; then
+        source $HOME/.bashrc-personal
+    fi
     '';
     sessionVariables = {
     
