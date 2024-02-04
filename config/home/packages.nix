@@ -13,6 +13,7 @@
     jellyfin-media-player
     ticktick
     lazygit
+    tmuxPlugins.tmux-fzf
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
     (import ./../scripts/emopicker9000.nix { inherit pkgs; })
@@ -27,7 +28,7 @@
 
   programs.fzf = {
     enable = true;
-    enableBashIntegration = true;
-    tmux.enableShellIntegration = true;
+    #enableBashIntegration = true;
+    #tmux.enableShellIntegration = true;
   };
 }
