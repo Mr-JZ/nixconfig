@@ -61,6 +61,7 @@ in {
     brightnessctl
     toybox 
     gh
+    gh-dach
     neovim
     vim
     ripgrep
