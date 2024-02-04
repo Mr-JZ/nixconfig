@@ -16,6 +16,15 @@
     };
     keybindings = {
       "alt+g" = "send_key ctrl+b g";
+      "alt+c" = "send_key ctrl+b c";
+      "alt+x" = "send_key ctrl+b x";
+      "alt+n" = "send_key ctrl+b n";
+      "alt+p" = "send_key ctrl+b p";
+      "alt+e" = "send_key ctrl+b e";
+      "alt+z" = "send_key ctrl+b z";
+      "alt+f" = "send_key ctrl+b m";
+      "alt+'" = "send_key ctrl+b \"";
+      "alt+%" = "send_key ctrl+b %";
     };
     extraConfig = ''
       foreground #${config.colorScheme.colors.base05}
