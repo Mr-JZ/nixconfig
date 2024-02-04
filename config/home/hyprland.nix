@@ -127,7 +127,7 @@ in with lib; {
       bind = ${modifier},Return,exec,kitty
       bind = ${modifier},C,exec, ${browser} --app=https://calendar.google.com
       bind = ${modifier}SHIFT,O,exec, ${browser} --app=https://chat.openai.com
-      bind = ${modifier}SHIFT,Return,exec,rofi -show drun
+      bind = ${modifier},Space,exec,rofi -show drun
       bind = ${modifier}SHIFT,W,exec,kitty -e amfora
       bind = ${modifier}SHIFT,S,exec,swaync-client -rs
       bind = ${modifier},W,exec,${browser}
