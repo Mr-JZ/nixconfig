@@ -20,6 +20,10 @@ in with lib; {
       windowrule = float, ^(steam)$
       windowrule = center, ^(steam)$
       windowrule = size 1080 900, ^(steam)$
+      windowrulev2 = float, title:^(Picture in picture)$
+      windowrulev2 = pin, title:^(Picture in picture)$
+      windowrulev2 = size 30%, title:^(Picture in picture)$
+      windowrulev2 = move 1760 1090, title:^(Picture in picture)$
       general {
         gaps_in = 6
         gaps_out = 8
