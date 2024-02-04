@@ -13,8 +13,11 @@
     initExtra = ''
     stty -ixon
 
-    eval "$(zoxide init bash)"
+    # the command that initializes zoxide. And make that zoxide works with bash
+    eval "$(zoxide init bash)" 
+    # include path to PATH
     export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
+    export PATH=$PATH:$HOME/go/bin
     '';
     sessionVariables = {
     
