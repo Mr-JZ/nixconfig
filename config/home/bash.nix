@@ -23,6 +23,7 @@
     if [ -f $HOME/.bashrc-personal ]; then
         source $HOME/.bashrc-personal
     fi
+    echo "this for internet connection: nmcli device wifi connect <SSID> password <PASS>"
     '';
     sessionVariables = {
     
