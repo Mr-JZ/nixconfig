@@ -15,6 +15,13 @@
     lazygit
     tmuxPlugins.tmux-fzf
     dbeaver
+    speedtest-cli
+    texlive.combined.scheme-full
+    flutter
+    android-studio
+    android-tools
+    chromedriver
+# obsidian
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
     (import ./../scripts/emopicker9000.nix { inherit pkgs; })

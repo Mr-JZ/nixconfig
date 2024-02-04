@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, config, lib, username, ... }:
 
 {
   # List services that you want to enable:
@@ -29,6 +29,8 @@
   sound.enable = true;
   security.rtkit.enable = true;
   programs.thunar.enable = true;
+  programs.adb.enable = true;
+  users.users."${username}".extraGroups = ["adbusers"];
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth

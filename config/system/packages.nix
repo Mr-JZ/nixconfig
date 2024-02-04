@@ -22,7 +22,12 @@ let
   ];
 in {
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [
+      "electron-25.9.0"
+    ];
+  };
   # List System Programs
   environment.systemPackages = with pkgs; [
     wget 
@@ -70,6 +75,9 @@ in {
     cargo
     fzf
     distrobox # generate a distro that can help to install packages
+    yubikey-manager-qt
+    temurin-jre-bin-17
+    zulu17 # java 17 jdk
     (pkgs.python3.withPackages my-python-packages)
   ];
 
