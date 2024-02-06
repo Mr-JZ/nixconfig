@@ -77,6 +77,7 @@ in {
     distrobox # generate a distro that can help to install packages
     yubikey-manager-qt
     temurin-jre-bin-17
+    android-tools
     zulu17 # java 17 jdk
     (pkgs.python3.withPackages my-python-packages)
   ];

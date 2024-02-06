@@ -19,8 +19,8 @@
     texlive.combined.scheme-full
     flutter
     android-studio
-    android-tools
     chromedriver
+    libreoffice-qt
 # obsidian
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
