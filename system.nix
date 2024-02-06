@@ -12,7 +12,6 @@
 
   # Enable networking
   networking.hostName = "${hostname}"; # Define your hostname
-  networking.networkmanager.enable = true;
 
   # Set your time zone
   time.timeZone = "${theTimezone}";
@@ -36,7 +35,7 @@
     homeMode = "755";
     isNormalUser = true;
     description = "${gitUsername}";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" ];
     packages = with pkgs; [];
   };
 

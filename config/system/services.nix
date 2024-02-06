@@ -30,7 +30,6 @@
   security.rtkit.enable = true;
   programs.thunar.enable = true;
   programs.adb.enable = true;
-  users.users."${username}".extraGroups = ["adbusers"];
   services.gvfs.enable = true;
   services.tumbler.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
