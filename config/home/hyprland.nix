@@ -35,7 +35,7 @@ in with lib; {
       }
       input {
         kb_layout = us
-        kb_options=caps:super
+        kb_options=caps:escape
         follow_mouse = 1
         touchpad {
           natural_scroll = false
@@ -128,9 +128,9 @@ in with lib; {
       bind = ${modifier},C,exec, ${browser} --app=https://calendar.google.com
       bind = ${modifier}SHIFT,O,exec, ${browser} --app=https://chat.openai.com
       bind = ${modifier},Space,exec,rofi -show drun
-      bind = ${modifier}SHIFT,W,exec,kitty -e amfora
       bind = ${modifier}SHIFT,S,exec,swaync-client -rs
       bind = ${modifier},W,exec,${browser}
+      bind = ${modifier}SHIFT,W,exec,${browser} --app=https://web.whatsapp.com
       bind = ${modifier},E,exec,emopicker9000
       bind = ${modifier},S,exec,grim -g "$(slurp)"
       bind = ${modifier},D,exec,discord
