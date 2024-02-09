@@ -4,24 +4,29 @@
 {
   # Install Packages For The User
   home.packages = with pkgs; [
-    pkgs."${browser}" discord libvirt swww grim slurp gnome.file-roller
-    swaynotificationcenter rofi-wayland imv transmission-gtk mpv
-    gimp obs-studio blender-hip kdenlive audacity
-    font-awesome spotify swayidle neovide pavucontrol
-    element-desktop swaylock stow home-manager
-    chromium
-    jellyfin-media-player
-    ticktick
+    # packages that make hyprland work
+    libvirt 
+    swww # TODO: What does this packages do?
+    grim # TODO: What does this packages do?
+    slurp # TODO: What does this packages do?
+    gnome.file-roller # TODO: What is gnome.file-roller
+    swaynotificationcenter 
+    rofi-wayland 
+    imv # TODO: What does this packages do?
+    transmission-gtk # TODO: What does this packages do?
+    mpv
+    font-awesome 
+    swayidle 
+    neovide 
+    pavucontrol
+    element-desktop 
+    swaylock 
+    home-manager
+    speedtest-cli
+    stow 
     lazygit
     tmuxPlugins.tmux-fzf
-    dbeaver
-    speedtest-cli
     texlive.combined.scheme-full
-    flutter
-    android-studio
-    chromedriver
-    libreoffice-qt
-# obsidian
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
     (import ./../scripts/emopicker9000.nix { inherit pkgs; })
