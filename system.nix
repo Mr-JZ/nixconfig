@@ -12,6 +12,7 @@
 
   # Enable networking
   networking.hostName = "${hostname}"; # Define your hostname
+  networking.networkmanager.enable = true;
 
   # Set your time zone
   time.timeZone = "${theTimezone}";
@@ -58,7 +59,7 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
-  };
+ };
 
   system.stateVersion = "23.11";
 }
