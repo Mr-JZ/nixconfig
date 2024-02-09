@@ -71,6 +71,7 @@ in {
     ripgrep
     zoxide
     tmux
+    tmuxPlugins.tmux-fzf
     rustup 
     cargo
     fzf
