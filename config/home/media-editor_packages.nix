@@ -12,4 +12,5 @@
     kdenlive 
     audacity
     blender-hip # TODO: What is the blender-hip packages and what is the difference to the original
+  ];
 }
