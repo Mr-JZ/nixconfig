@@ -188,6 +188,10 @@ in with lib; {
       bind = ,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
       bind = ,XF86MonBrightnessDown,exec,brightnessctl set 5%-
       bind = ,XF86MonBrightnessUp,exec,brightnessctl set +5%
+      bind = ,XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      bind =, XF86AudioPlay, exec, playerctl --player=spotify play-pause # the stupid key is called play , but it toggles 
+      bind =, XF86AudioNext, exec, playerctl --player=spotify next 
+      bind =, XF86AudioPrev, exec, playerctl --player=spotify previous
     '' ];
   };
 }
