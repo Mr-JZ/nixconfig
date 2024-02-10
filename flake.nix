@@ -31,7 +31,7 @@
     theLCVariables = "en_US.UTF-8";
     theTimezone = "Europe/Berlin";
     theme = "tokyo-night-storm";
-    waybarStyle = "style2"; # can be style1-2
+    waybarStyle = "style1"; # can be style1-2
     borderAnim = "on"; # anything other than on disables anim borders in Hyprland
     browser = "chromium";
     wallpaperGit = "https://gitlab.com/Zaney/my-wallpapers.git";
