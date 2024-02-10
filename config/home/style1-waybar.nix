@@ -10,7 +10,7 @@ lib.mkIf ("${waybarStyle}" == "style1") {
       position = "top";
 
       modules-left = [ "hyprland/window" "custom/startmenu" ];
-      modules-center = [ "network" "pulseaudio" "cpu" "hyprland/workspaces" "memory" "disk" "clock" ];
+      modules-center = [ "network" "pulseaudio" "cpu" "memory" "disk" "clock" ];
       modules-right = [ "idle_inhibitor" "custom/themeselector" "custom/notification" "battery" "tray" ];
       "hyprland/workspaces" = {
       	format = "{icon}";
@@ -23,7 +23,7 @@ lib.mkIf ("${waybarStyle}" == "style1") {
       	on-scroll-down = "hyprctl dispatch workspace e-1";
       };
       "clock" = {
-        format = "{: %I:%M %p}";
+        format = "{: %H:%M  %Y-%m-%d}";
       	tooltip = false;
       };
       "hyprland/window" = {
