@@ -22,10 +22,10 @@
     element-desktop 
     swaylock 
     home-manager
+    playerctl
     speedtest-cli
     stow 
     lazygit
-    tmuxPlugins.tmux-fzf
     texlive.combined.scheme-full
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
@@ -38,8 +38,4 @@
     (import ./../scripts/theme-selector.nix { inherit pkgs; })
     (import ./../scripts/nvidia-offload.nix { inherit pkgs; })
   ];
-
-  programs.fzf = {
-    enable = true;
-  };
 }

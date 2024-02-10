@@ -24,6 +24,7 @@ in {
   # Allow unfree packages
   nixpkgs.config = {
     allowUnfree = true;
+    android_sdk.accept_license = true;
     permittedInsecurePackages = [
       "electron-25.9.0"
     ];
@@ -70,18 +71,26 @@ in {
     vim
     ripgrep
     zoxide
+    fzf
     tmux
     tmuxPlugins.tmux-fzf
     rustup 
     cargo
-    fzf
     distrobox # generate a distro that can help to install packages
+    flutter
+    android-studio
+    android-tools
     yubikey-manager-qt
     temurin-jre-bin-17
-    android-tools
     zulu17 # java 17 jdk
     (pkgs.python3.withPackages my-python-packages)
   ];
+  environment.sessionVariables = rec {
+    CHROME_EXECUTABLE = pkgs.chromedriver + "/bin/chromedriver";
+    JAVA_HOME = pkgs.jdk11;
+    ANDROID_SDK_ROOT = pkgs.android-tools;
+  };
+  programs.adb.enable = true;
 
   programs.steam.gamescopeSession.enable = true;
   programs.dconf.enable = true;
@@ -98,5 +107,10 @@ in {
   };
 
   virtualisation.libvirtd.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    # If you have a special storage format you can set it here
+    # storgeDriver = "btrfs";
+  };
   programs.virt-manager.enable = true;
 }
