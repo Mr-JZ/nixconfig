@@ -22,7 +22,7 @@
     ./media-editor_packages.nix
     ./productivity_packages.nix
     ./browser_packages.nix
-    ./message_packages.nix
+    ./messaging_packages.nix
     ./development_packages.nix
 
     ./service.nix
