@@ -36,9 +36,10 @@
     homeMode = "755";
     isNormalUser = true;
     description = "${gitUsername}";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "adbusers" "docker" ];
     packages = with pkgs; [];
   };
+  users.extraGroups.docker.members = [ "username-with-access-to-socket" ];
 
   environment.variables = {
     POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
