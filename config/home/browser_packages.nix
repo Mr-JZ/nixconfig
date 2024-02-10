@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     chromium
     firefox
+    google-chrome
     pkgs."${browser}" 
   ];
 }
