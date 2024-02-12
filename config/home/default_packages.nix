@@ -37,5 +37,7 @@
     (import ./../scripts/themechange.nix { inherit pkgs; inherit flakeDir; })
     (import ./../scripts/theme-selector.nix { inherit pkgs; })
     (import ./../scripts/nvidia-offload.nix { inherit pkgs; })
+    (import ./../scripts/play_yoga.nix { inherit pkgs; } )
+    (import ./../scripts/play_meditation.nix { inherit pkgs; } )
   ];
 }
