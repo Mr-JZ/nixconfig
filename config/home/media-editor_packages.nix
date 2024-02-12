@@ -11,6 +11,7 @@
     gimp 
     obs-studio  
     kdenlive 
+    # davinci-resolve
     audacity
     blender-hip # TODO: What is the blender-hip packages and what is the difference to the original
   ];
