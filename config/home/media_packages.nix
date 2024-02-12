@@ -7,5 +7,6 @@
     spotify 
     jellyfin-media-player
     zathura
+    yt-dlp
     ];
 }
