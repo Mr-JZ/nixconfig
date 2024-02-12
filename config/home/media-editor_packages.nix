@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     # obsidian
     libreoffice-qt
+    projectlibre
     inkscape
     gimp 
     obs-studio  
