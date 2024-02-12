@@ -80,8 +80,9 @@ in {
     flutter
     android-studio
     android-tools
+    usbutils
     yubikey-manager-qt
-    temurin-jre-bin-17
+    
     zulu17 # java 17 jdk
     (pkgs.python3.withPackages my-python-packages)
   ];
