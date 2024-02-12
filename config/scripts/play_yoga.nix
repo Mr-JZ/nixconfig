@@ -14,8 +14,10 @@ if [ -z "$VIDEO_FILE" ]; then
 fi
 
 # Play the video using mpv
+playerctl pause
 hyprctl keyword windowrulev2 float,class:\(mpv\)
 mpv "$VIDEO_FILE"
 sleep 1
 hyprctl keyword windowrulev2 unset,class:\(mpv\)
+playerctl play
 ''
