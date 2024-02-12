@@ -138,7 +138,7 @@ in with lib; {
       bind = ${modifier},G,exec,gimp
       bind = ${modifier},M,exec,${browser} --app=https://mail.google.com
       bind = ${modifier}SHIFT,M,exec,${browser} --app=https://mipmip.github.io/home-manager-option-search/
-      bind = ${midifier},N,exec,${browser} --app=https://search.nixos.org/packages
+      bind = ${modifier},N,exec,${browser} --app=https://search.nixos.org/packages
       bind = ${modifier},Q,killactive,
       bind = ${modifier},P,pseudo,
       bind = ${modifier}SHIFT,I,togglesplit,
