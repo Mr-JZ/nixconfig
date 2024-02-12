@@ -28,6 +28,10 @@
       source "$(fzf-share)/key-bindings.bash"
       source "$(fzf-share)/completion.bash"
     fi
+
+    bind '"\C-w": backward-kill-word'
+    UID=$(id -u)
+    GID=$(id -g)
     '';
     sessionVariables = {
     

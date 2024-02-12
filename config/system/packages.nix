@@ -82,7 +82,6 @@ in {
     android-tools
     usbutils
     yubikey-manager-qt
-    
     zulu17 # java 17 jdk
     (pkgs.python3.withPackages my-python-packages)
   ];
