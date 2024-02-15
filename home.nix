@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, username,
+{ config, pkgs, inputs, env, username,
   gitUsername, gitEmail, gtkThemeFromScheme,
   theme, browser, wallpaperDir, wallpaperGit,
   flakeDir, waybarStyle, ... }:
