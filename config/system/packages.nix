@@ -1,20 +1,6 @@
 { pkgs, config, inputs, ... }:
 
 let
-  buildToolsVersion = "34.0.0-rc4";
-  androidComposition = pkgs.androidenv.composeAndroidPackages {
-    buildToolsVersions = [ buildToolsVersion "28.0.3" ];
-    platformVersions = [ "34" "33" "32" "31" "28" ];
-    abiVersions = [ "armeabi-v7a" "arm64-v8a" ];
-    includeEmulator = true;
-    emulatorVersion = "34.1.9";
-    includeSources = true;
-    includeSystemImages = true;
-    systemImageTypes = [ "google_apis_playstore" ];
-    useGoogleAPIs = false;
-    useGoogleTVAddOns = false;
-  };
-  androidSdk = androidComposition.androidsdk;
   my-python-packages = ps: with ps; [
     pandas
     requests
@@ -38,9 +24,9 @@ in {
   # Allow unfree packages
   nixpkgs.config = {
     allowUnfree = true;
-    android_sdk.accept_license = true;
     permittedInsecurePackages = [
       "electron-25.9.0"
+      "electron-19.1.9"
     ];
   };
   # List System Programs
@@ -94,7 +80,6 @@ in {
     distrobox # generate a distro that can help to install packages
     flutter
     android-studio
-    androidSdk
     usbutils
     yubikey-manager-qt
     zulu17 # java 17 jdk
@@ -102,7 +87,6 @@ in {
   ];
   environment.sessionVariables = rec {
     CHROME_EXECUTABLE = pkgs.chromedriver + "/bin/chromedriver";
-    ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
   };
   programs.adb.enable = true;
 
