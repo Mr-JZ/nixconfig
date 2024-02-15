@@ -39,6 +39,10 @@ in with lib; {
         follow_mouse = 1
         touchpad {
           natural_scroll = false
+          middle_button_emulation = true
+          clickfinger_behavior = true
+          tap-to-click = true 
+          tap-and-drag = true
         }
         sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
         accel_profile = flat
