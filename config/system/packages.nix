@@ -78,8 +78,6 @@ in {
     rustup 
     cargo
     distrobox # generate a distro that can help to install packages
-    flutter
-    android-studio
     usbutils
     yubikey-manager-qt
     zulu17 # java 17 jdk
