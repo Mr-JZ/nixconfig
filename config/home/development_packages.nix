@@ -8,5 +8,6 @@
     via
     etcher
     glab
+    quickemu
   ];
 }

@@ -7,6 +7,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nix-colors.url = "github:misterio77/nix-colors";
     hyprland.url = "github:hyprwm/Hyprland";
+    flake-utils.url = "github:numtide/flake-utils";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
@@ -15,14 +16,28 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    env = {
+      url = "path:/home/mr-jz/github/nixconfig/env.nix";
+      # Fallback to an empty set if `env.nix` is not available
+      # This requires handling in the outputs to merge defaults properly
+      flake = false;
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }:
+  outputs = inputs@{ nixpkgs, flake-utils, home-manager, env, ... }:
+  flake-utils.lib.eachDefaultSystem (system:    # Default values if `env.nix` is not provided or specific keys are missing
   let
+    defaultEnv = {
+      hostname = "default-masterlaptop";
+    };
+    
+    # Actual environment values, merging defaults with any provided by `env.nix`
+    actualEnv = defaultEnv // (if env ? nixosConfigurations then env.nixosConfigurations.default.config.system.env else {});
     system = "x86_64-linux";
 
+
     # User Variables
-    hostname = "masterlaptop";
+    hostname = actualEnv.hostname;
     username = "mr-jz";
     gitUsername = "Jan Zisenis";
     gitEmail = "jan.zisenis@gmail.com";
@@ -86,6 +101,6 @@
 	    ];
       };
     };
-  };
+  });
 }
 
