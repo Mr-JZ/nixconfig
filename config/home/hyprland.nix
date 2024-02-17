@@ -121,6 +121,12 @@ in with lib; {
       exec-once = swaync
       exec-once = wallsetter
       exec-once = swayidle -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'
+      exec-once = hyprctl dispatch exec [ workspace 1, silent ] kitty
+      exec-once = hyprctl dispatch exec [ workspace 2, silent ] google-chrome-stable
+      exec-once = hyprctl dispatch exec [ workspace 3, silent ] flatpak run md.obsidian.Obsidian
+      exec-once = hyprctl dispatch exec [ workspace 6, silent ] spotify
+      exec-once = hyprctl dispatch exec [ workspace 7, silent ] ticktick
+      exec-once = hyprctl dispatch exec [ workspace 9, silent ] ${browser} --app=https://chat.openai.com
       dwindle {
         pseudotile = true
         preserve_split = true
