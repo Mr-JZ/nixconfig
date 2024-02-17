@@ -1,26 +1,5 @@
 { pkgs, config, inputs, ... }:
-
-let
-  my-python-packages = ps: with ps; [
-    pandas
-    requests
-    pendulum # daytime made easy
-    pypdf # pdf manipulation
-    icecream # print debugging
-    loguru # logging
-    rich # rich print
-    tqdm # progress bar
-    xarray # n-d array
-    polars # data manipulation
-    seaborn # data visualization
-    result # result type
-    pydantic # data validation
-    fastapi # web framework
-    sqlmodel # orm
-    httpx # http client
-    python-dotenv # env variables
-  ];
-in {
+{
   # Allow unfree packages
   nixpkgs.config = {
     allowUnfree = true;
@@ -80,12 +59,7 @@ in {
     distrobox # generate a distro that can help to install packages
     usbutils
     yubikey-manager-qt
-    zulu17 # java 17 jdk
-    (pkgs.python3.withPackages my-python-packages)
   ];
-  environment.sessionVariables = rec {
-    CHROME_EXECUTABLE = pkgs.chromedriver + "/bin/chromedriver";
-  };
   programs.adb.enable = true;
 
   programs.steam.gamescopeSession.enable = true;
