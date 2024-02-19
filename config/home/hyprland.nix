@@ -121,12 +121,11 @@ in with lib; {
       exec-once = swaync
       exec-once = wallsetter
       exec-once = swayidle -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'
-      exec-once = hyprctl dispatch exec [ workspace 1, silent ] kitty
-      exec-once = hyprctl dispatch exec [ workspace 2, silent ] google-chrome-stable
-      exec-once = hyprctl dispatch exec [ workspace 3, silent ] flatpak run md.obsidian.Obsidian
-      exec-once = hyprctl dispatch exec [ workspace 6, silent ] spotify
-      exec-once = hyprctl dispatch exec [ workspace 7, silent ] ticktick
-      exec-once = hyprctl dispatch exec [ workspace 9, silent ] ${browser} --app=https://chat.openai.com
+      exec-once = hyprctl dispatch exec [ workspace 1 silent ] kitty
+      exec-once = hyprctl dispatch exec [ workspace 2 silent ] ${browser}
+      exec-once = hyprctl dispatch exec [ workspace 3 silent ] flatpak run md.obsidian.Obsidian
+      exec-once = hyprctl dispatch exec [ workspace 6 silent ] spotify
+      exec-once = hyprctl dispatch exec [ workspace 7 silent ] ticktick
       dwindle {
         pseudotile = true
         preserve_split = true
@@ -142,7 +141,7 @@ in with lib; {
       bind = ${modifier},W,exec,${browser}
       bind = ${modifier}SHIFT,W,exec,${browser} --app=https://web.whatsapp.com
       bind = ${modifier},E,exec,emopicker9000
-      bind = ${modifier},S,exec,grim -g "$(slurp)"
+      bind = ${modifier},S,exec,grim -g "$(slurp)" - | wl-copy
       bind = ${modifier},D,exec,discord
       bind = ${modifier},O,exec,obs
       bind = ${modifier},G,exec,gimp
