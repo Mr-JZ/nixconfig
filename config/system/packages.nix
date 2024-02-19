@@ -59,6 +59,8 @@
     distrobox # generate a distro that can help to install packages
     usbutils
     yubikey-manager-qt
+    spice
+    samba
   ];
   programs.adb.enable = true;
 
@@ -77,6 +79,7 @@
   };
 
   virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
   virtualisation.docker = {
     enable = true;
     # If you have a special storage format you can set it here
