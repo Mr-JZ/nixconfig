@@ -42,6 +42,7 @@
       flake-update="sudo nix flake update ${flakeDir}";
       gcCleanup="nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       ghd="gh-dash";
+      ghc="gh repo clone $(gh repo list | fzf | awk '{print $1}')";
       z="zoxide";
       v="nvim";
       ls="lsd";
@@ -49,7 +50,7 @@
       la="lsd -a";
       lal="lsd -al";
       ".."="cd ..";
-      "s" = "sesh connect $(sesh list | fzf --height 24)";
+      s = "sesh connect $(sesh list | fzf --height 24)";
     };
   };
 }
