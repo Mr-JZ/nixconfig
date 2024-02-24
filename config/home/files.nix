@@ -13,17 +13,15 @@
     source = ./files/fonts;
     recursive = true;
   };
-  home.file.".config/tmux" = {
-    source = ./files/tmux;
-    recursive = true;
+  home.file.".config/tmux" = builtins.fetchGit {
+    url = "https://github.com/MR-JZ/tmuxconf";
+# TODO: change this rev to the correct one
+    rev = "4c9f6ad2be28e2bf9789991803f2129f7c0faf17";
+    submoduls = true;
   };
-  home.file.".config/nvim" = {
-    source = ./files/nvim;
-    recursive = true;
-  };
-  home.file.".config/kitty" = {
-    source = ./files/kitty;
-    recursive = true;
+  home.file.".config/nvim".source =  builtins.fetchGit {
+    url = "https://github.com/MR-JZ/nvimconfig";
+    rev = "4c9f6ad2be28e2bf9789991803f2129f7c0faf17";
   };
 }
 
