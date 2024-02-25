@@ -45,3 +45,12 @@ sudo nixos-rebuild switch --flake .
 Now when you want to rebuild the configuration you have access to an alias called flake-rebuild that will rebuild the flake based of the flakeDir variable you set in flake.nix!
 
 Hope you enjoy!
+
+# Make the ssh-key available as sudo
+
+Because if you rebuild the system the git fetch function doesn't have the ssh key, because it looks in the `/root/.ssh` folder.
+To copy your key execute this command:
+```bash
+sudo cp ~/.ssh/id_ed25519* /root/.ssh/
+```
+This copies both ssh keys into the ssh root folder. And on the next rebuild you should be fine.
