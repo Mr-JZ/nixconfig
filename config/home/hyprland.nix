@@ -138,6 +138,7 @@ in with lib; {
       bind = ${modifier}SHIFT,O,exec, ${browser} --app=https://chat.openai.com
       bind = ${modifier},Space,exec,rofi -show drun
       bind = ${modifier}SHIFT,S,exec,swaync-client -rs
+      bind = ${modifier}SHIFT,L,exec,swaylock -f
       bind = ${modifier},W,exec,${browser}
       bind = ${modifier}SHIFT,W,exec,${browser} --app=https://web.whatsapp.com
       bind = ${modifier},E,exec,emopicker9000
