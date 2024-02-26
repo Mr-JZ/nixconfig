@@ -9,5 +9,6 @@
     etcher
     glab
     quickemu
+    fd
   ];
 }

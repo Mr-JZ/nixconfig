@@ -8,7 +8,6 @@
     chromium
     firefox
     google-chrome
-    mullvad-vpn
     pkgs."${browser}" 
   ];
 }

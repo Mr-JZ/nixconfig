@@ -14,13 +14,13 @@
     recursive = true;
   };
   home.file.".config/tmux".source = builtins.fetchGit {
-    url = "git@github.com:Mr-JZ/tmuxconfig.git";
-    rev = "28c3f60e215b152f51d0744463ba78d21c221642";
-    # submodules = true;
+   url = "git@github.com:Mr-JZ/tmuxconfig.git";
+   rev = "28c3f60e215b152f51d0744463ba78d21c221642";
+   # submodules = true;
   };
-  home.file.".config/nvim".source =  builtins.fetchGit {
-    url = "git@github.com:Mr-JZ/nvimconfig.git";
-    rev = "4c9f6ad2be28e2bf9789991803f2129f7c0faf17";
-  };
+  #home.file.".config/nvim".source =  builtins.fetchGit {
+  #  url = "git@github.com:Mr-JZ/nvimconfig.git";
+  #  rev = "4c9f6ad2be28e2bf9789991803f2129f7c0faf17";
+  #};
 }
 
