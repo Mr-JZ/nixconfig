@@ -10,7 +10,7 @@
     glab
     quickemu
     fd
-    codium
+    vscodium
     vscode
     ollama
   ];
