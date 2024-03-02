@@ -10,5 +10,8 @@
     glab
     quickemu
     fd
+    codium
+    vscode
+    ollama
   ];
 }
