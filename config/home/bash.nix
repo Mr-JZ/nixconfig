@@ -49,6 +49,7 @@
       ll="lsd -l";
       la="lsd -a";
       lal="lsd -al";
+      wifi="nmcli device wifi";
       ".."="cd ..";
       s = "sesh connect $(sesh list | fzf --height 24)";
     };
