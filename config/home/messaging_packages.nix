@@ -9,5 +9,6 @@
     slack
     element-desktop
     signal-desktop
+    teams-for-linux
   ];
 }
