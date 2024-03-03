@@ -1,6 +1,6 @@
 { pkgs, config, lib, browser,
   cpuType, gpuType, wallpaperDir,
-  inputs, borderAnim, ... }:
+  inputs, borderAnim, lidSwitch, ... }:
 
 let
   theme = config.colorScheme.colors;
@@ -203,9 +203,9 @@ in with lib; {
       bind =, XF86AudioPlay, exec, playerctl --player=spotify play-pause # the stupid key is called play , but it toggles 
       bind =, XF86AudioNext, exec, playerctl --player=spotify next 
       bind =, XF86AudioPrev, exec, playerctl --player=spotify previous
-      indl=,switch:on:325bcb0,exec,hyprctl keyword monitor "eDP-1, 2560x1600, 0x0, 1"
+      bind=,switch:on:${lidSwitch},exec,hyprctl keyword monitor "eDP-1,preferred,auto,1"
       # trigger when the switch is turning off
-      bindl=,switch:off:325bcb0,exec,hyprctl keyword monitor "eDP-1, disable"
+      bind=,switch:off:${lidSwitch},exec,hyprctl keyword monitor "eDP-1, disable"
     '' ];
   };
 }

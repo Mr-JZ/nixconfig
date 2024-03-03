@@ -1,5 +1,5 @@
 {
-  description = "ZaneyOS";
+  description = "Mr-JZ configuration of ZaneyOS";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -37,6 +37,10 @@
     wallpaperGit = "https://gitlab.com/Zaney/my-wallpapers.git";
     wallpaperDir = "/home/${username}/Pictures/Wallpapers";
     flakeDir = "/home/${username}/github/nixconfig";
+    # this is for the laptop switch if you open or close the laptop
+    # you can get the id with the command `hyprclt devices` this 
+    # prints a list of devices and in ther should be also a switch
+    lidSwitch = "325bcb0";
     # Driver selection profile
     # Options include amd (tested), intel, nvidia
     # GPU hybrid options: intel-nvidia, intel-amd
@@ -66,6 +70,7 @@
           inherit wallpaperDir; inherit wallpaperGit;
           inherit cpuType; inherit theKBDLayout;
           inherit theLCVariables; inherit gpuType;
+          inherit lidSwitch;
         };
 	    modules = [ ./system.nix
           home-manager.nixosModules.home-manager {
@@ -76,6 +81,7 @@
               inherit wallpaperGit; inherit flakeDir;
               inherit gpuType; inherit cpuType;
               inherit waybarStyle; inherit borderAnim;
+              inherit lidSwitch;
               inherit (inputs.nix-colors.lib-contrib {inherit pkgs;}) gtkThemeFromScheme;
             };
 	        home-manager.useGlobalPkgs = true;
@@ -88,4 +94,3 @@
     };
   };
 }
-
