@@ -11,7 +11,7 @@
     quickemu
     fd
     vscodium
-    vscode
+    # vscode
     ollama
   ];
 }
