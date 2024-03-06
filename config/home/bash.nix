@@ -51,6 +51,7 @@
       la="lsd -a";
       lal="lsd -al";
       wifi="nmcli device wifi";
+      cgh="git rev-parse main | wl-copy";
       ".."="cd ..";
       s = "sesh connect $(sesh list | fzf --height 24)";
     };
