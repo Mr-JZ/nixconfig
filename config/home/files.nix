@@ -18,9 +18,9 @@
    rev = "f3773c6f6805d7f54044c9a78181b3cfee0cff50";
    submodules = true;
   };
-  #home.file.".config/nvim".source =  builtins.fetchGit {
-  #  url = "git@github.com:Mr-JZ/nvimconfig.git";
-  #  rev = "4c9f6ad2be28e2bf9789991803f2129f7c0faf17";
-  #};
+  home.file.".config/nvim".source =  builtins.fetchGit {
+    url = "git@github.com:Mr-JZ/nvimconfig.git";
+    rev = "10a8960b09382e2c445b31f552e5eb436e934f25";
+  };
 }
 
