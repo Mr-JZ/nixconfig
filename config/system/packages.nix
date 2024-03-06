@@ -53,7 +53,6 @@
     zoxide
     fzf
     tmux
-    tmuxPlugins.tmux-fzf
     rustup 
     cargo
     distrobox # generate a distro that can help to install packages

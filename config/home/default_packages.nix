@@ -40,4 +40,5 @@
     (import ./../scripts/play_yoga.nix { inherit pkgs; } )
     (import ./../scripts/play_meditation.nix { inherit pkgs; } )
   ];
+  programs.fzf.tmux.enableShellIntegration = true;
 }

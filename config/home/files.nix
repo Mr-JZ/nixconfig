@@ -15,8 +15,8 @@
   };
   home.file.".config/tmux".source = builtins.fetchGit {
    url = "git@github.com:Mr-JZ/tmuxconfig.git";
-   rev = "28c3f60e215b152f51d0744463ba78d21c221642";
-   # submodules = true;
+   rev = "f3773c6f6805d7f54044c9a78181b3cfee0cff50";
+   submodules = true;
   };
   #home.file.".config/nvim".source =  builtins.fetchGit {
   #  url = "git@github.com:Mr-JZ/nvimconfig.git";
