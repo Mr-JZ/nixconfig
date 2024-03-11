@@ -123,7 +123,7 @@ in with lib; {
       exec-once = swayidle -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'
       exec-once = hyprctl dispatch exec [ workspace 1 silent ] kitty
       exec-once = hyprctl dispatch exec [ workspace 2 silent ] ${browser}
-      exec-once = hyprctl dispatch exec [ workspace 3 silent ] flatpak run md.obsidian.Obsidian
+      exec-once = hyprctl dispatch exec [ workspace 3 silent ] obsidian
       exec-once = hyprctl dispatch exec [ workspace 6 silent ] spotify
       exec-once = hyprctl dispatch exec [ workspace 7 silent ] ticktick
       dwindle {
