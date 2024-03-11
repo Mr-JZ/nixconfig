@@ -6,12 +6,13 @@
 {
   imports =
     [
+      inputs.sops-nix.nixosModules.sops
       ./hardware.nix
       ./config/system
     ];
 
   # Enable networking
-  networking.hostName = "${hostname}"; # Define your hostname
+  networking.hostName = "${hostname}";  # Define your hostname
   networking.networkmanager.enable = true;
 
   # Set your time zone
@@ -42,6 +43,7 @@
   users.extraGroups.docker.members = [ "username-with-access-to-socket" ];
 
   environment.variables = {
+    EDITOR = "nvim";
     POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
   };
 
@@ -61,6 +63,14 @@
       options = "--delete-older-than 7d";
     };
  };
+  sops.defaultSopsFile = ./secrets/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+  
+  sops.age.keyFile = "/home/${username}/.config/sops/age/keys.txt";
+
+  sops.secrets.openai_api_key = {
+    owner = "${username}";
+  };
 
   system.stateVersion = "23.11";
 }

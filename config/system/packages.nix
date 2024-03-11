@@ -50,6 +50,7 @@
     neovim
     vim
     ripgrep
+    ripgrep-all
     zoxide
     fzf
     tmux
@@ -60,7 +61,9 @@
     yubikey-manager-qt
     spice
     samba
+    sops
   ];
+
   programs.adb.enable = true;
 
   programs.steam.gamescopeSession.enable = true;
