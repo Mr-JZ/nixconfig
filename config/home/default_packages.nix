@@ -39,6 +39,7 @@
     (import ./../scripts/nvidia-offload.nix { inherit pkgs; })
     (import ./../scripts/play_yoga.nix { inherit pkgs; } )
     (import ./../scripts/play_meditation.nix { inherit pkgs; } )
+    (import ./../scripts/backup_mainwebsite.nix { inherit pkgs; inherit username;} )
   ];
   programs.fzf.tmux.enableShellIntegration = true;
 }

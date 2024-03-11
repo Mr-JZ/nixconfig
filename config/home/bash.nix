@@ -32,9 +32,11 @@
     bind '"\C-w": backward-kill-word'
     UID=$(id -u)
     GID=$(id -g)
+    if [ -f "/run/secrets/openai_api_key" ]; then
+      export OPENAI_API_KEY=$(cat /run/secrets/openai_api_key)
+    fi
     '';
     sessionVariables = {
-    
     };
     shellAliases = {
       sv="sudo vim";
