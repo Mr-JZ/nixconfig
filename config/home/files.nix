@@ -15,12 +15,12 @@
     recursive = true;
   };
   home.file.".config/tmux".source = builtins.fetchGit {
-   url = "git@github.com:Mr-JZ/tmuxconfig.git";
-   rev = "f3773c6f6805d7f54044c9a78181b3cfee0cff50";
+   url = "https://github.com/Mr-JZ/tmuxconfig.git";
+   rev = "aaa2b19bd5a6a3eb1fb5e14491fa107afbe4bd8e";
    submodules = true;
   };
   home.file.".config/nvim".source =  builtins.fetchGit {
-    url = "git@github.com:Mr-JZ/nvimconfig.git";
+    url = "https://github.com/Mr-JZ/nvimconfig.git";
     rev = "10a8960b09382e2c445b31f552e5eb436e934f25";
   };
 }
