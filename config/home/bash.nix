@@ -45,6 +45,7 @@
       gcCleanup="nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       ghd="gh-dash";
       ghc="gh repo clone $(gh repo list | fzf | awk '{print $1}')";
+      git-hash-copy="printf %s '$(git rev-parse HEAD)' | wl-copy";
       mullr="mullvad relay set location $(mullvad relay list | fzf | awk '{print $1}')";
       z="zoxide";
       v="nvim";
