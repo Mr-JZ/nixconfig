@@ -62,6 +62,7 @@
     spice
     samba
     sops
+    pinentry
   ];
 
   programs.adb.enable = true;
