@@ -21,7 +21,7 @@
   };
   home.file.".config/nvim".source =  builtins.fetchGit {
     url = "https://github.com/Mr-JZ/nvimconfig.git";
-    rev = "10a8960b09382e2c445b31f552e5eb436e934f25";
+    rev = "f710218b40259bb601ebd50a6a9d039e00b2de16";
   };
 }
 
