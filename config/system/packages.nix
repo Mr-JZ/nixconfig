@@ -63,6 +63,7 @@
     samba
     sops
     pinentry
+    log4cxx
   ];
 
   programs.adb.enable = true;
