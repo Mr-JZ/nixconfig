@@ -24,6 +24,10 @@ in with lib; {
       windowrulev2 = pin, title:^(Picture in picture)$
       windowrulev2 = size 30%, title:^(Picture in picture)$
       windowrulev2 = move 1760 1090, title:^(Picture in picture)$
+      windowrulev2 = pin, class:^(chrome-pomofocus.io)
+      windowrulev2 = float, class:^(chrome-pomofocus.io)
+      windowrulev2 = size 425 205, class:^(chrome-pomofocus.io)
+      windowrulev2 = move 2115 69, class:^(chrome-pomofocus.io)
       general {
         gaps_in = 6
         gaps_out = 8
@@ -154,6 +158,7 @@ in with lib; {
       bind = ${modifier}SHIFT,I,togglesplit,
       bind = ${modifier},F,fullscreen,
       bind = ${modifier}SHIFT,F,togglefloating,
+      bind = ${modifier}CTRL,F, exec, ${browser} --app=https://pomofocus.io/
       bind = ${modifier}SHIFT,C,exit,
       bind = ${modifier}SHIFT,left,movewindow,l
       bind = ${modifier}SHIFT,right,movewindow,r
